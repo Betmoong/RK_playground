@@ -30,6 +30,7 @@
 		5C4F67A42BBCD8CC00D38842 /* RK_playgroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RK_playgroundApp.swift; sourceTree = "<group>"; };
 		5C4F67A82BBCD8CE00D38842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C4F67AB2BBCD8CE00D38842 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C5421252BBE6B7500561279 /* RK-playground-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RK-playground-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5CB9B1302BBCED81004C650D /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		5CB9B1342BBCF68B004C650D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5CB9B1372BBCFE0D004C650D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		5C4F67A32BBCD8CC00D38842 /* RK_playground */ = {
 			isa = PBXGroup;
 			children = (
+				5C5421252BBE6B7500561279 /* RK-playground-Info.plist */,
 				5C4F67B52BBCDA3300D38842 /* App */,
 				5CB9B1362BBCFD01004C650D /* Shared */,
 				5C4F67B62BBCDA3F00D38842 /* Feature */,
@@ -391,6 +393,7 @@
 				DEVELOPMENT_TEAM = RYZ3RA62XL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RK-playground-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,6 +423,7 @@
 				DEVELOPMENT_TEAM = RYZ3RA62XL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RK-playground-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
