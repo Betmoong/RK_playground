@@ -10,6 +10,14 @@ import SwiftUI
 extension Color {
     static var rkBackground: Color = .init(hex: "f2f2f7")
     static var rkMainColor: Color = .init(hex: "84c4ff")
+    
+    static var random: Color {
+        return Color(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1)
+        )
+    }
 }
 
 extension Color {
