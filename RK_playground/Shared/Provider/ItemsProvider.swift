@@ -22,6 +22,13 @@ class ItemsProvider {
                      view:RKView(CounterView(store: Store(initialState: CounterFeature.State()) { CounterFeature() }))),
             
             ItemData(id: 2,
+                     section: .tca,
+                     createDate: "2024-04-05",
+                     title: "Search",
+                     caption: "Search with TCA",
+                     view:RKView(SearchView(store: Store(initialState: SearchFeature.State()) { SearchFeature() }))),
+            
+            ItemData(id: 3,
                      section: .animation,
                      createDate: "2024-04-03",
                      title: "Counter2",

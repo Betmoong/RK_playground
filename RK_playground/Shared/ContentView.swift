@@ -28,7 +28,7 @@ public struct ContentView: View {
                     item.view
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarColor(backgroundColor: Color.clear,
-                                            titleColor: Color.green)
+                                            titleColor: Color.black)
                         .onAppear {
                             vibration()
                         }

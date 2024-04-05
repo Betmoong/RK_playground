@@ -6,36 +6,33 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
  
 struct SearchView: View {
-    @State private var keyword = ""
-    @State private var searchResults: [String] = []
-    
-    private let sampleRepoLists = [
-        "Swift",
-        "SwiftyJSON",
-        "SwiftGuide",
-        "SwiftterSwift",
-        "MyStory",
-    ]
+    let store: StoreOf<SearchFeature>
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Search", text: self.$keyword)
-                        .textFieldStyle(.roundedBorder)
+                    TextField("Search",
+                              text: Binding(
+                                get: {
+                                    store.keyword
+                                },
+                                set: { store.send(.keywordChanged($0)) }
+                              )
+                    )
+                    .textFieldStyle(.roundedBorder)
                     
                     Button("검색") {
-                        self.searchResults = self.sampleRepoLists.filter {
-                            $0.contains(self.keyword)
-                        }
+                        store.send(.serchButtonTapped)
                     }
                 }
                 .padding()
                 
                 List {
-                    ForEach(self.searchResults, id: \.self) { Text($0) }
+                    ForEach(store.searchResults, id: \.self) { Text($0) }
                 }
             }
             .navigationTitle("Search")
@@ -44,5 +41,9 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView()
+    SearchView(
+        store: Store(initialState: SearchFeature.State(), reducer: {
+            SearchFeature()
+        })
+    )
 }
