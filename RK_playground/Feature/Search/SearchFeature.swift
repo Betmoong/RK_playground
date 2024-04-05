@@ -29,7 +29,7 @@ struct SearchFeature {
                 return .none
             case .serchButtonTapped:
                 state.searchResults = self.sampleRepoLists.filter {
-                    $0.contains(state.keyword)
+                    $0.lowercased().contains(state.keyword.lowercased())
                 }
                 return .none
             }
