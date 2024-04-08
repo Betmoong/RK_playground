@@ -29,6 +29,13 @@ class ItemsProvider {
                      view:RKView(SearchView(store: Store(initialState: SearchFeature.State()) { SearchFeature() }))),
             
             ItemData(id: 3,
+                     section: .tca,
+                     createDate: "2024-04-08",
+                     title: "TabBar",
+                     caption: "TabBar with TCA",
+                     view:RKView(TabBarView(store: Store(initialState: TabBarFeature.State()) { TabBarFeature() }))),
+            
+            ItemData(id: 4,
                      section: .animation,
                      createDate: "2024-04-03",
                      title: "Counter2",
