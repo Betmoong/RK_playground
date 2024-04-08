@@ -36,6 +36,13 @@ class ItemsProvider {
                      view:RKView(TabBarView(store: Store(initialState: TabBarFeature.State()) { TabBarFeature() }))),
             
             ItemData(id: 4,
+                     section: .tca,
+                     createDate: "2024-04-08",
+                     title: "Binding",
+                     caption: "Binding with TCA",
+                     view:RKView(SettingView(store: Store(initialState: SettingFeature.State()) { SettingFeature() }))),
+            
+            ItemData(id: 5,
                      section: .animation,
                      createDate: "2024-04-03",
                      title: "Counter2",
