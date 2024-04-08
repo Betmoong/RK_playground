@@ -15,17 +15,16 @@ struct SettingView: View {
         Form {
             Toggle(
                 "진동 피드백",
-                isOn: $store.isHapticFeedbackEnable.sending(\.isHapticFeedbackEnableChanged)
+                isOn: $store.isHapticFeedbackEnable
             )
             Toggle(
                 "알림 설정",
-                isOn: $store.isNotificationEnable.sending(\.isNotificationEnableChanged)
+                isOn: $store.isNotificationEnable
             )
             TextField(
                 "여기에 입력",
-                text: $store.textFieldValue.sending(\.textFieldChanged)
+                text: $store.textFieldValue
             )
-            
         }
     }
 }

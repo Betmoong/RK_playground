@@ -17,26 +17,24 @@ struct SettingFeature {
         var textFieldValue: String = ""
     }
     
-    enum Action {
-        case isHapticFeedbackEnableChanged(Bool)
-        case isNotificationEnableChanged(Bool)
-        case textFieldChanged(String)
+    enum Action: BindableAction {
+        case binding(BindingAction<State>)
     }
     
     var body: some ReducerOf<Self> {
+        BindingReducer()
+        
         Reduce { state, action in
             switch action {
-            case .isHapticFeedbackEnableChanged(let isEnable):
-                state.isHapticFeedbackEnable = isEnable
+            // 이러한 바인딩 위에 추가적인 도메인 로직을 적용하고 싶은 경우 아래 처럼 사용
+            /*
+            case .binding(\.textFieldValue):
+                print(state.textFieldValue)
                 return .none
-            case .isNotificationEnableChanged(let isEnable):
-                state.isNotificationEnable = isEnable
-                return .none
-            case .textFieldChanged(let text):
-                state.textFieldValue = text
+             */
+            case .binding(_):
                 return .none
             }
         }
     }
-    
 }
